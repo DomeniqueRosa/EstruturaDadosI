@@ -17,7 +17,7 @@ void inserir_inicio(Lista* lista, int valor){
 
     //verificar
     if(lista->fim == NULL){
-        novo->proximo = valor;
+        novo->proximo = novo;
         lista->fim = novo;
     }else{
         novo->proximo = lista->fim->proximo;
