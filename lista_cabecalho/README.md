@@ -12,7 +12,7 @@ tydefstruct No{
 
 * ponteiro para primeiro nó representa a lista
 
--> tratativas especiais
+## Tratativas especiais
 
 * se a lista esta vazia precisa de verificações constantes
 * gera dificuldade em manter o codigo uniforme
@@ -21,12 +21,12 @@ tydefstruct No{
 
 ### Nó de cabecalho
 
--> não armazena dados uteis
--> não precisa de tratativas especiais e mantem um codigo uniforme
--> facilita a escrita do código: sempre tem um primeiro nó
--> primeiro nó serve de ponto de partida para lista
--> ponteiro para primeiro nó dos dados uteis
--> nunca é removido pois é um auxiliar para implementar a lista (mesmo que a lista esteja vazia)
+* não armazena dados uteis
+* não precisa de tratativas especiais e mantem um codigo uniforme
+* facilita a escrita do código: sempre tem um primeiro nó
+* primeiro nó serve de ponto de partida para lista
+* ponteiro para primeiro nó dos dados uteis
+* nunca é removido pois é um auxiliar para implementar a lista (mesmo que a lista esteja vazia)
 
 ### Exemplo sem cabeçalho
 
