@@ -9,7 +9,7 @@ tydefstruct No{
 }No
 
 ```
-
+ 
 * ponteiro para primeiro nó representa a lista
 
 ## Tratativas especiais
