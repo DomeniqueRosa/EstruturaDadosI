@@ -91,3 +91,73 @@ free(temp);
 free(lista);
 
 }
+
+void reverterLista(Lista* lista);
+
+int obterMaior(Lista* lista){
+    int maior = 0;
+    No* atual = lista->cabeca->prox;
+
+    if(!estaVazia(lista)){
+        maior = atual->dado;
+
+        while (atual != NULL) {
+        if(atual->dado > maior){
+            maior = atual->dado;
+        }
+
+        atual = atual->prox;
+    }
+
+    return maior
+    
+
+}
+
+int obterMenor(Lista* lista){
+    int menor = 0;
+    No* atual = lista->cabeca->prox;
+
+    if(!estaVazia(lista)){
+        menor = atual->dado;
+
+        while (atual != NULL) {
+        if(atual->dado < menor){
+            menor = atual->dado;
+        }
+
+        atual = atual->prox;
+    }
+
+    return menor
+}
+
+int estaVazia(Lista* lista){
+    if(lista->cabeca->prox == NULL){
+        return 1;
+    }
+    return 0;
+}
+
+Lista* copiarLista(Lista* lista);
+
+void concatenarListas(Lista* l1, Lista* l2);
+
+void removerDuplicatas(Lista* lista);
+
+void inserirFim(Lista* lista, int valor);
+
+int contarElementos(Lista* lista){
+
+    No* atual = lista->cabeca->prox;
+
+    int tamanho_lista = 0;
+        while (atual != NULL) {
+            tamanho_lista++;
+            atual = atual->prox;
+        }
+    return tamanho_lista;
+
+}
+
+int buscar(Lista* lista, int valor);

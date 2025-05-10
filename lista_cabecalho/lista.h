@@ -45,6 +45,6 @@ void inserirFim(Lista* lista, int valor);
 
 int contarElementos(Lista* lista);
 
-int buscar(Lista* lista, int valor)
+int buscar(Lista* lista, int valor);
 
 #endif
