@@ -202,7 +202,27 @@ void concatenarListas(Lista* l1, Lista* l2){
 }
 
 void removerDuplicatas(Lista* lista){
-    
+    //ponteiro q percorre a lista do inicio ate o fim
+    No* atual = lista->cabeca->prox;
+    while (atual != NULL) {
+        No* anterior = atual;
+        No* comparar = atual->prox;
+        //compara se o anterior é igual o atual
+        while (comparar != NULL) {
+            if (comparar->dado == atual->dado) {
+                //se sim guarda o prox no anterior
+                anterior->prox = comparar->prox;
+                //remove
+                free(comparar);
+                comparar = anterior->prox; // avança 
+            } else {
+                anterior = comparar;
+                comparar = comparar->prox;
+            }
+        }
+
+    atual = atual->prox;
+}
 }
 
 //No* novo = (No*)malloc(sizeof(No));
