@@ -99,7 +99,7 @@ void reverterLista(Lista* lista){
     No* proximo =(No*)malloc(sizeof(No));
 
     anterior = NULL;
-    proximo = NULL
+    proximo = NULL;
     atual = lista->cabeca->prox;
 
     while(atual != NULL){
@@ -152,7 +152,7 @@ int obterMenor(Lista* lista){
         atual = atual->prox;
     }
 
-    return menor
+    return menor;
     }
 }
 
