@@ -164,7 +164,7 @@ int estaVazia(Lista* lista){
 }
 
 Lista* copiarLista(Lista* lista){
-    Lista* copia = criar_lista();
+    Lista* copia = criarLista();
 
     No* atual = lista->cabeca->prox;
     No* atual_copia = copia->cabeca;
