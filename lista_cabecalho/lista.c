@@ -185,9 +185,25 @@ Lista* copiarLista(Lista* lista){
 }
 
 
-void concatenarListas(Lista* l1, Lista* l2);
+void concatenarListas(Lista* l1, Lista* l2){
+    No* atual_l1 = l1->cabeca;
+    No* atual_l2 = l2->cabeca->prox;
+    //verifica se l2 nao esta vazia
+    if(atual_l2 != NULL){ 
+            // se nao estiver vai ate o final da lista l1 
+            while( atual_l1->prox != NULL){
+                atual_l1 = atual_l1->prox;
+            }    
+        }
+    // e liga o primeiro no de l2 no final de l1
+    atual_l1->prox = atual_l2;
+    //libera l2
+    liberarLista(l2);
+}
 
-void removerDuplicatas(Lista* lista);
+void removerDuplicatas(Lista* lista){
+    
+}
 
 //No* novo = (No*)malloc(sizeof(No));
 void inserirFim(Lista* lista, int valor){
