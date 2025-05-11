@@ -92,7 +92,31 @@ free(lista);
 
 }
 
-void reverterLista(Lista* lista);
+//No* novo = (No*)malloc(sizeof(No));
+void reverterLista(Lista* lista){
+    No* anterior =(No*)malloc(sizeof(No));
+    No* atual =(No*)malloc(sizeof(No));
+    No* proximo =(No*)malloc(sizeof(No));
+
+    anterior = NULL;
+    proximo = NULL
+    atual = lista->cabeca->prox;
+
+    while(atual != NULL){
+        proximo = atual->prox; 
+        atual->prox = anterior; //inverte o ponteiro
+
+        //mover
+        anterior = atual;
+        atual = proximo;
+
+
+    }
+
+    lista->cabeca->prox = anterior;
+
+
+}
 
 int obterMaior(Lista* lista){
     int maior = 0;
@@ -107,11 +131,10 @@ int obterMaior(Lista* lista){
         }
 
         atual = atual->prox;
+        }
+
+    return maior;
     }
-
-    return maior
-    
-
 }
 
 int obterMenor(Lista* lista){
@@ -130,6 +153,7 @@ int obterMenor(Lista* lista){
     }
 
     return menor
+    }
 }
 
 int estaVazia(Lista* lista){
@@ -139,13 +163,45 @@ int estaVazia(Lista* lista){
     return 0;
 }
 
-Lista* copiarLista(Lista* lista);
+Lista* copiarLista(Lista* lista){
+    Lista* copia = criar_lista();
+
+    No* atual = lista->cabeca->prox;
+    No* atual_copia = copia->cabeca;
+
+    while(atual != NULL){
+        //cria novo no para ser inserido na copia lista
+        No* novo = (No*)malloc(sizeof(No));
+        novo->dado = atual->dado; // copia os dados
+        novo->prox = NULL;
+
+        atual_copia->prox = novo;
+        atual_copia = novo;
+        
+        atual = atual->prox;
+    }
+
+    return copia;
+}
+
 
 void concatenarListas(Lista* l1, Lista* l2);
 
 void removerDuplicatas(Lista* lista);
 
-void inserirFim(Lista* lista, int valor);
+//No* novo = (No*)malloc(sizeof(No));
+void inserirFim(Lista* lista, int valor){
+    No* atual = lista->cabeca;
+    No* novo = (No*)malloc(sizeof(No));
+    novo->dado = valor;
+    novo->prox = NULL;
+        //percorre ate o final da lista
+        while(atual->prox != NULL){
+            atual = atual->prox;
+        }
+    //no final adc novo valor
+    atual->prox = novo;  
+}
 
 int contarElementos(Lista* lista){
 
@@ -160,4 +216,22 @@ int contarElementos(Lista* lista){
 
 }
 
-int buscar(Lista* lista, int valor);
+int buscar(Lista* lista, int valor){
+
+    No* atual = lista->cabeca->prox;
+
+    //verifica se a lista nao esta vazia
+    if(!estaVazia(lista)){
+        //faz um loop na lista ate encontrar o valor caso contrario retorna -1
+        while(atual != NULL){
+            if(atual->dado == valor){
+                return atual->dado;
+            }
+            atual = atual->prox;
+        }
+
+
+    }
+    return -1;
+
+}
