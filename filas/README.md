@@ -14,3 +14,13 @@
 - front: consulta primeiro elemento
 - vazio: verifica  se a fila esta vazia
 - size: retorna a quantidade de elementos na fila
+
+### VANTAGENS
+- Garante operacoes constantes 0(1) quando bem implementada
+- Serve de base para estruturas mais complexas
+
+### DESVANTAGENS
+- Sem acesso aleatorios aos elementos
+- Tamanho ilimitado na implementação estatica
+- Overhead de ponteiros na implementação dinamica
+
