@@ -15,7 +15,7 @@ void exibir_menu() {
     printf("5. Inserir item na fila de prioridade\n");
     printf("6. Sair\n");
     printf("========================\n");
-    printf("Escolha uma opção: ");
+    printf("Escolha uma opcao: ");
 }
 
 int main() {

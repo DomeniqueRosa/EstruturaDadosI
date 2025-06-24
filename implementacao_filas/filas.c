@@ -39,6 +39,30 @@ float tempo_medio_espera(Fila f) {
 // EXERCÍCIO 2 – Verificador de Palíndromos (Fila + Pilha)
 
 
+bool enfileira(FilaChar* f, char ch) {
+    if (f->tamanho == MAX) {
+        return false;  // Fila cheia
+    }
+
+    f->tras = (f->tras + 1) % MAX;
+    f->itens[f->tras] = ch;
+    f->tamanho++;
+    return true;
+}
+
+bool desenfileira(FilaChar* f, char* ch) {
+    if (f->tamanho == 0) {
+        return false;  // Fila vazia
+    }
+
+    *ch = f->itens[f->frente];
+    f->frente = (f->frente + 1) % MAX;
+    f->tamanho--;
+    return true;
+}
+
+
+
 void inicializa_pilha(Pilha* p) {
     p->topo = -1;
 }
