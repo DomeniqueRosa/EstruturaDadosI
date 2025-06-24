@@ -3,7 +3,7 @@
 
 typedef struct No{
     int valor;
-    struct No* anterior
+    struct No* anterior;
     struct No* proximo;
 }No;
 
@@ -18,7 +18,9 @@ void inserir_inicio(Lista* lista, int valor);
 void inserir_fim(Lista* lista, int valor);
 void exibir_lista(Lista* lista);
 void liberar_lista(Lista* lista);
-void exibirFrente(Lista* lista): //imprime do primeiro até o último elemento.
-void exibirTras(Lista* lista): // imprime do último até o primeiro elemento.
+void exibirFrente(Lista* lista);
+void exibirTras(Lista* lista);
+void inserir_posicao(Lista* lista, int valor, int posicao);
+void remover_posicao(Lista* lista, int posicao);
 
 #endif
