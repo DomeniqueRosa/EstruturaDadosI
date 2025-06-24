@@ -11,7 +11,7 @@ void menu() {
     printf("4. Ver topo da pilha\n");
     printf("5. Verificar se está vazia\n");
     printf("6. Exibir todos os elementos\n");
-    printf("7- jogar hanoi");
+    printf("7- jogar hanoi\n");
     printf("0. Sair\n");
     printf("Escolha uma opcao: ");
 }
